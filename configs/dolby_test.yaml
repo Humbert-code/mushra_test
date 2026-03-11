@@ -1,5 +1,5 @@
 testname: "Dolby Atmos 渲染模式声学特征主观评价实验 / Dolby Atmos 렌더링 모드 음향 특성 주관적 평가 실험"
-testId: "atmos_mushra_v9_screenshot"
+testId: "atmos_mushra_v10_strict_mapping"
 bufferSize: 4096
 stopOnErrors: true
 showButtonPreviousPage: true
@@ -9,14 +9,14 @@ pages:
   - type: "generic"
     id: "welcome_page"
     name: "欢迎 / 환영합니다"
-    content: "<h3>欢迎参与 Dolby Atmos 双耳渲染主观听音实验</h3><p>本实验旨在评估四种不同的双耳渲染模式对音频的影响。请戴好 Audio-Technica ATH-M70x 耳机。</p><p>在接下来的每个页面中，您将听到一个【参考信号 (Reference)】。请通过移动下方的滑块，将随机打乱的样本与参考信号进行对比打分。</p><p><b>注意：其中一个盲听样本是与参考信号完全相同的隐藏参考！</b></p><hr><h3>Dolby Atmos 바이노럴 렌더링 주관적 청취 실험에 참여해 주셔서 감사합니다</h3><p>본 실험은 4가지 다른 바이노럴 렌더링 모드가 오디오에 미치는 영향을 평가하는 데 목적이 있습니다. Audio-Technica ATH-M70x 헤드폰을 착용해 주십시오.</p><p>다음의 각 페이지에서는 【기준 신호 (Reference)】를 듣게 됩니다. 아래의 슬라이더를 이동하여 무작위로 섞인 샘플들을 기준 신호와 비교하여 평가해 주십시오.</p><p><b>주의: 블라인드 샘플 중 하나는 기준 신호와 완전히 동일한 숨겨진 기준음(Hidden Reference)입니다!</b></p>"
+    content: "<h3>欢迎参与 Dolby Atmos 双耳渲染主观听音实验</h3><p>本实验旨在评估四种不同的双耳渲染模式对音频的具体影响。请戴好 Audio-Technica ATH-M70x 耳机。</p><p>在接下来的每个页面中，您将听到一个【参考信号 (Reference)】。请通过移动下方的滑块，将随机打乱的样本与参考信号进行对比打分。</p><p><b>注意：每个测试页面的【评价维度】不同，请严格按照提示进行单一维度的打分！其中一个盲听样本是与参考信号完全相同的隐藏参考。</b></p><hr><h3>Dolby Atmos 바이노럴 렌더링 주관적 청취 실험에 참여해 주셔서 감사합니다</h3><p>본 실험은 4가지 다른 바이노럴 렌더링 모드가 오디오에 미치는 구체적인 영향을 평가하는 데 목적이 있습니다. Audio-Technica ATH-M70x 헤드폰을 착용해 주십시오.</p><p>다음의 각 페이지에서는 【기준 신호 (Reference)】를 듣게 됩니다. 아래의 슬라이더를 이동하여 무작위로 섞인 샘플들을 기준 신호와 비교하여 평가해 주십시오.</p><p><b>주의: 각 테스트 페이지의 【평가 차원】이 다르므로, 제시된 단일 차원에 대해서만 엄격하게 평가해 주십시오! 블라인드 샘플 중 하나는 기준 신호와 완전히 동일한 숨겨진 기준음입니다.</b></p>"
 
-  # 实验一：人声（Vocal）
+  # 实验一：人声（Vocal）- 只测音色
   - type: "mushra"
     id: "vocal_test"
-    name: "测试 1：人声 / 테스트 1: 보컬"
+    name: "测试 1：人声 (音色评价) / 테스트 1: 보컬 (음색 평가)"
     createAnchor35: false   
-    content: "<b>【评价维度：音色忠实度与空间头外化】</b><br>请评估其音色是否发生异化（如发闷或梳状滤波感），以及声音是否成功跳出颅内。100分为完美还原参考信号。<br><br><b>【평가 차원: 음색 충실도 및 공간적 외재화】</b><br>음색이 변질되었는지(예: 먹먹해짐 또는 빗살모양 필터 왜곡), 그리고 소리가 두개골을 성공적으로 벗어났는지 평가해 주십시오. 100점은 기준 신호를 완벽하게 재현함을 의미합니다."
+    content: "<b>【当前评价维度：音色忠实度 (Timbral Fidelity)】</b><br>请<b>忽略</b>声音的空间位置变化，<b>仅评估其音色是否发生异化</b>（如是否发闷、失去高频空气感或产生梳状滤波感）。<br>100分代表音色与参考信号完全一致，完美保真。<br><br><b>【현재 평가 차원: 음색 충실도 (Timbral Fidelity)】</b><br>소리의 공간적 위치 변화는 <b>무시</b>하시고, <b>음색이 변질되었는지 여부만 평가</b>해 주십시오 (예: 먹먹해짐, 고주파 공기감 상실 또는 빗살모양 필터 왜곡 발생 여부).<br>100점은 음색이 기준 신호와 완전히 일치하며 완벽하게 보존됨을 의미합니다."
     showFilename: false 
     reference: "audio/Vocal_Original.wav" 
     stimuli:
@@ -25,12 +25,12 @@ pages:
       Mid_Mode: "audio/Vocal_Mid.wav"
       Far_Mode: "audio/Vocal_Far.wav"
 
-  # 实验二：小军鼓（Snare）
+  # 实验二：小军鼓（Snare）- 只测瞬态
   - type: "mushra"
     id: "snare_test"
-    name: "测试 2：小军鼓 / 테스트 2: 스네어 드럼"
+    name: "测试 2：小军鼓 (瞬态评价) / 테스트 2: 스네어 드럼 (트랜지언트 평가)"
     createAnchor35: false   
-    content: "<b>【评价维度：瞬态冲击力与定位精度】</b><br>请评估起振（Attack）边缘是否依然干脆利落，是否因为算法处理而导致声音听起来“发软”、“拖泥带水”或丧失了原本的打击颗粒感。<br><br><b>【평가 차원: 트랜지언트 타격감 및 정위 정확도】</b><br>어택(Attack) 엣지가 여전히 날카롭고 명확한지, 혹은 알고리즘 처리로 인해 소리가 '부드러워지거나', '흐릿해지거나', 타격의 질감을 상실하지 않았는지 평가해 주십시오."
+    content: "<b>【当前评价维度：瞬态冲击力 (Transient Punch)】</b><br>请<b>忽略</b>声音的距离感，<b>仅评估其起振（Attack）边缘是否依然干脆利落</b>。<br>如果因为算法处理导致声音听起来“发软”、“拖泥带水”或丧失了原本锋利的打击颗粒感，请予以低分。<br><br><b>【현재 평가 차원: 트랜지언트 타격감 (Transient Punch)】</b><br>소리의 거리감은 <b>무시</b>하시고, <b>어택(Attack) 엣지가 여전히 날카롭고 명확한지만 평가</b>해 주십시오.<br>알고리즘 처리로 인해 소리가 '부드러워지거나', '흐릿해지거나', 본래의 날카로운 타격 질감을 상실했다면 낮은 점수를 부여해 주십시오."
     showFilename: false
     reference: "audio/Snare_Original.wav"
     stimuli:
@@ -39,12 +39,12 @@ pages:
       Mid_Mode: "audio/Snare_Mid.wav"
       Far_Mode: "audio/Snare_Far.wav"
 
-  # 实验三：环境铺底（Pad）
+  # 实验三：环境铺底（Pad）- 只测包围感
   - type: "mushra"
     id: "pad_test"
-    name: "测试 3：合成器 Pad / 테스트 3: 신시사이저 패드"
+    name: "测试 3：合成器 Pad (空间评价) / 테스트 3: 신시사이저 패드 (공간성 평가)"
     createAnchor35: false   
-    content: "<b>【评价维度：空间包围感 (LEV)】</b><br>请评估声音在多大程度上宽广地包裹听众。100分代表极佳的空间弥散感与包围度。<br><br><b>【평가 차원: 공간 포위감 (LEV)】</b><br>소리가 청취자를 얼마나 넓게 감싸는지 평가해 주십시오. 100점은 극도로 뛰어난 공간 확산감 및 포위감을 의미합니다."
+    content: "<b>【当前评价维度：空间包围感 (Spatial Envelopment, LEV)】</b><br>请评估声音在多大程度上<b>宽广地包裹听众</b>。<br>100分代表极佳的空间弥散感与无死角的包围度；低分代表声音挤在中间、缺乏宽度。<br><br><b>【현재 평가 차원: 공간 포위감 (Spatial Envelopment, LEV)】</b><br>소리가 청취자를 <b>얼마나 넓게 감싸는지</b> 평가해 주십시오.<br>100점은 극도로 뛰어난 공간 확산감 및 사각지대 없는 포위감을 의미하며, 낮은 점수는 소리가 가운데로 몰려 있고 너비가 부족함을 의미합니다."
     showFilename: false
     reference: "audio/Pad_Original.wav"
     stimuli:
@@ -53,9 +53,9 @@ pages:
       Mid_Mode: "audio/Pad_Mid.wav"
       Far_Mode: "audio/Pad_Far.wav"
 
-  # 结束与数据导出（极简截图指南版）
+  # 结束与数据导出
   - type: "finish"
     id: "end"
     name: "完成 / 완료"
     showResults: true
-    content: "<h3>🎉 测试完成！/ 테스트 완료!</h3><br><div style='background-color: #e8f5e9; padding: 20px; border-left: 6px solid #4CAF50; text-align: left; margin-top: 20px;'><h3 style='color: #2E7D32; margin-top: 0;'>📸 数据提交指南 / 데이터 제출 안내</h3><p style='font-size: 17px; color: #1b5e20; line-height: 1.6;'><b>【中文】</b><br>1. 请点击页面最下方的 <b>[Send Results]</b> 按钮。<br>2. 当屏幕弹出黄色的成绩单弹窗后，<b>请直接对整个成绩单截屏（截图）</b>。<br>3. 将截图发送给主考官即可完成测试。非常感谢！<br><br><br><b>【한국어】</b><br>1. 페이지 하단의 <b>[Send 기Results]</b> 버튼을 클릭해 주십시오.<br>2. 노란색 결과 창이 나타나면, <b>해당 화면을 캡처(스크린샷)해 주십시오</b>.<br>3. 캡처한 이미지를 감독관에게 전송하시면 테스트가 완료됩니다. 참여해 주셔서 감사합니다!</p></div>"
+    content: "<h3>🎉 测试完成！/ 테스트 완료!</h3><br><div style='background-color: #e8f5e9; padding: 20px; border-left: 6px solid #4CAF50; text-align: left; margin-top: 20px;'><h3 style='color: #2E7D32; margin-top: 0;'>📸 数据提交指南 / 데이터 제출 안내</h3><p style='font-size: 17px; color: #1b5e20; line-height: 1.6;'><b>【中文】</b><br>1. 请点击页面最下方的 <b>[Send Results]</b> 按钮。<br>2. 当屏幕弹出黄色的成绩单弹窗后，<b>请直接对整个成绩单截屏（截图）</b>。<br>3. 将截图发送给主考官即可完成测试。非常感谢！<br><br><br><b>【한국어】</b><br>1. 페이지 하단의 <b>[Send Results]</b> 버튼을 클릭해 주십시오.<br>2. 노란색 결과 창이 나타나면, <b>해당 화면을 캡처(스크린샷)해 주십시오</b>.<br>3. 캡처한 이미지를 감독관에게 전송하시면 테스트가 완료됩니다. 참여해 주셔서 감사합니다!</p></div>"
